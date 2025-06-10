@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/logo.png" type="image/x-icon">
+    <title>PlayList</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>My Favourite PlayList 	&#127926;</h1>
+    <br>
+    <label>
+        <input type="checkbox"  onclick="handleClickEvent()">
+        <div id="text">Click to view Video Songs</div>
+    </label>
+    
+    
+    <br>
+    <!--Audio Songs-->
+    <div class="audio">
+        <h2>Audio Songs</h2>
+        
+    <div>
+        <h2>1. Siva Sivaya Potri - Baahubali</h2>
+        <img src="./asset/bahubali.jpg" alt="bahubali" type="image/webp" width="350" height="350">
+        <br>
+        <audio src="./asset/Siva Sivaya Potri-Baahubali.mp3" type="audio/mpeg" controls >                
+    </div>
+
+    <div>
+        <h2>2. Aval - Manithan</h2>
+        <img src="./asset/aval-manithan.jpg" alt="manithan" type="image/webp" width="350" height="350" >
+        <br>
+        <audio controls >
+            <source src="./asset/manithan-aval.mp3" type="audio/mpeg" >        
+    </div>
+    <div>
+        <h2>3. Sid Sriram Melody Hits</h2>
+        <img src="./asset/sidsriram.jpg" alt="sid sriram" type="image/jpg" width="350" height="350" >
+        <br>
+        <audio src="./asset/Sid_Sriram_Hits.mp3" type="audio/mpeg" controls >       
+    </div>
+    <div>
+        <h2>4. Anbae Peranbae - NGK</h2>
+        <img src="./asset/anbae-ngk.jpg" alt="ngk" type="image/jpg" width="350" height="350">
+        <br>
+        <audio src="./asset/Anbae Peranbae-NGK.mp3" type="audio/mpeg" controls >        
+    </div>
+    <div>
+        <h2>5. Mudhal Nee Mudivum Nee</h2>
+        <img src="./asset/mudhalnee.webp" alt="Mudhal Nee" type="image/webp" width="350" height="350">
+        <br>
+        <audio src="./asset/MudhalNee.mp3" type="audio/mpeg" controls >        
+    </div>
+    </div>
+
+    <!--Video Songs-->
+    <div class="video">
+        <h2>Video Songs</h2>
+        <div>
+            <h2>1. Seramal Ponal - Gulebahabali</h2>
+            <video width="500" height="300" controls>
+                <source src="./asset/video1.mp4" type="video/mp4">
+        </div>
+        <div>
+            <h2>2. Idhuvum Kadanthu Pogum - Netrikan</h2>
+            <video width="500" height="250" controls>
+                <source src="./asset/video2.mp4" type="video/mp4">
+        
+            
+    </div>
+<script>
+    function handleClickEvent() {
+        const videoDiv = document.querySelector('.video');
+        const audioDiv = document.querySelector('.audio');
+        
+        if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
+            // If videoDiv is hidden or not set, show it and hide audioDiv
+            videoDiv.style.display = 'block';
+            audioDiv.style.display = 'none';
+            document.getElementById('text').innerHTML = "UnClick to view Audio Songs";
+        } else {
+            videoDiv.style.display = 'none';
+            audioDiv.style.display = 'block';
+            document.getElementById('text').innerHTML = "Click to view Video Songs";
+        }
+
+        
+    }
+</script>
+</body>
+</html>

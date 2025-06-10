@@ -1,0 +1,22 @@
+img{
+   
+    border-radius:10px 10px 0 0;
+}
+
+audio{
+    padding: 10px; 
+    background-color: #d5d2d2; 
+    width:330px;
+    border-radius: 0 0 10px 10px;
+    
+}
+
+.video{
+    display: none;
+}
+
+#text{
+    display: inline;
+}
+
+
