@@ -1,138 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./asset/logo.png" type="image/x-icon">
-    <title>PlayList</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="./asset/logo.png" type="image/x-icon" />
+  <title>PlayList</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-    <h1>My Favourite PlayList 	&#127926;</h1>
-    <br>
-    <label>
-        <input type="checkbox"  onclick="handleClickEvent()">
-        <div id="text">Click to view Video Songs</div>
-    </label>
-    
-    
-    <br>
-    <!--Audio Songs-->
-    <div class="audio">
-        <h2>Audio Songs</h2>
-        
-    <div>
-        <h2>1. Siva Sivaya Potri - Baahubali</h2>
-        <img src="./asset/bahubali.jpg" alt="bahubali" type="image/webp" width="350" height="350">
-        <br>
-        <audio src="./asset/Siva Sivaya Potri-Baahubali.mp3" type="audio/mpeg" controls >                
-    </div>
+  <h1>My Favourite PlayList 🎶</h1>
+  <br/>
+  <label>
+    <input type="checkbox" onclick="handleClickEvent()"/>
+    <div id="text">Click to view Video Songs</div>
+  </label>
+
+  <br/>
+
+  <!-- Audio Songs -->
+  <div class="audio">
+    <h2>Audio Songs</h2>
 
     <div>
-        <h2>2. Aval - Manithan</h2>
-        <img src="./asset/aval-manithan.jpg" alt="manithan" type="image/webp" width="350" height="350" >
-        <br>
-        <audio controls >
-            <source src="./asset/manithan-aval.mp3" type="audio/mpeg" >        
+      <h2>1. Siva Sivaya Potri - Baahubali</h2>
+      <img src="./asset/bahubali.jpg" width="350" height="350" />
+      <br/>
+      <audio src="./asset/Siva Sivaya Potri-Baahubali.mp3" controls></audio>
     </div>
+
     <div>
-        <h2>3. Sid Sriram Melody Hits</h2>
-        <img src="./asset/sidsriram.jpg" alt="sid sriram" type="image/jpg" width="350" height="350" >
-        <br>
-        <audio src="./asset/Sid_Sriram_Hits.mp3" type="audio/mpeg" controls >       
+      <h2>2. Aval - Manithan</h2>
+      <img src="./asset/aval-manithan.jpg" width="350" height="350" />
+      <br/>
+      <audio src="./asset/manithan-aval.mp3" controls></audio>
     </div>
+
     <div>
-        <h2>4. Anbae Peranbae - NGK</h2>
-        <img src="./asset/anbae-ngk.jpg" alt="ngk" type="image/jpg" width="350" height="350">
-        <br>
-        <audio src="./asset/Anbae Peranbae-NGK.mp3" type="audio/mpeg" controls >        
+      <h2>3. Sid Sriram Melody Hits</h2>
+      <img src="./asset/sidsriram.jpg" width="350" height="350" />
+      <br/>
+      <audio src="./asset/Sid_Sriram_Hits.mp3" controls></audio>
     </div>
+
     <div>
-        <h2>5. Mudhal Nee Mudivum Nee</h2>
-        <img src="./asset/mudhalnee.webp" alt="Mudhal Nee" type="image/webp" width="350" height="350">
-        <br>
-        <audio src="./asset/MudhalNee.mp3" type="audio/mpeg" controls >        
+      <h2>4. Anbae Peranbae - NGK</h2>
+      <img src="./asset/anbae-ngk.jpg" width="350" height="350" />
+      <br/>
+      <audio src="./asset/Anbae Peranbae-NGK.mp3" controls></audio>
     </div>
+
+    <div>
+      <h2>5. Mudhal Nee Mudivum Nee</h2>
+      <img src="./asset/mudhalnee.webp" width="350" height="350" />
+      <br/>
+      <audio src="./asset/MudhalNee.mp3" controls></audio>
+    </div>
+  </div>
+
+  <!-- Video Songs -->
+  <div class="video" style="display: none;">
+    <h2>Video Songs</h2>
+
+    <div class="inline">
+      <h2>1. Seramal Ponal - Gulebahabali</h2>
+      <video width="640" height="350" controls>
+        <source src="./asset/video1.mp4" type="video/mp4" />
+      </video>
     </div>
 
-    <!--Video Songs-->
-    <div class="video">
-        <h2>Video Songs</h2>
-        <div>
-            <h2>1. Seramal Ponal - Gulebahabali</h2>
-            <video width="500" height="300" controls>
-                <source src="./asset/video1.mp4" type="video/mp4">
-        </div>
-        <div>
-            <h2>2. Idhuvum Kadanthu Pogum - Netrikan</h2>
-            <video width="500" height="250" controls>
-                <source src="./asset/video2.mp4" type="video/mp4">
-        
-            
+    <div class="inline">
+      <h2>2. Idhuvum Kadanthu Pogum - Netrikan</h2>
+      <video width="640" height="350" controls>
+        <source src="./asset/video2.mp4" type="video/mp4" />
+      </video>
     </div>
-<script>
-    // function handleClickEvent() {
-    //     const videoDiv = document.querySelector('.video');
-    //     const audioDiv = document.querySelector('.audio');
-        
 
-    //     if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
-    //         // If videoDiv is hidden or not set, show it and hide audioDiv
-    //         videoDiv.style.display = 'block';
-    //         audioDiv.style.display = 'none';
-    //         document.getElementById('text').innerHTML = "UnClick to view Audio Songs";
-    //     } else {
-    //         videoDiv.style.display = 'none';
-    //         audioDiv.style.display = 'block';
-    //         document.getElementById('text').innerHTML = "Click to view Video Songs";
-    //     }
+    <div class="inline">
+      <h2>3. Rowdy Baby - Maari 2</h2>
+      <div id="player-1"></div>
+    </div>
 
-        if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
-            // If videoDiv is hidden or not set, show it and hide audioDiv
-            videoDiv.style.display = 'block';
-            audioDiv.style.display = 'none';
-            document.getElementById('text').innerHTML = "UnClick to listen Audio Songs";
-        } else {
-            videoDiv.style.display = 'none';
-            audioDiv.style.display = 'block';
-            document.getElementById('text').innerHTML = "Click to view Video Songs";
-        }
+    <div  class="inline">
+      <h2>4. Dhandiya Aatamum Aada</h2>
+      <div id="player-2"></div>
+    </div>
 
+    <div  class="inline">
+      <h2>5. Karuppu Perazhaga - Kanchana</h2>
+      <div id="player-3"></div>
+    </div>
+  </div>
 
-        
-    // }
+  <script>
+    // YouTube player references
+    let players = [];
+
+    function onYouTubeIframeAPIReady() {
+      players[0] = new YT.Player("player-1", {
+        videoId: "x6Q7c9RyMzk", // Rowdy Baby
+        events: { onStateChange: onPlayerStateChange }
+      });
+
+      players[1] = new YT.Player("player-2", {
+        videoId: "vYdp-b0fms0", // Dhandiya Aatamum Aada
+        events: { onStateChange: onPlayerStateChange }
+      });
+
+      players[2] = new YT.Player("player-3", {
+        videoId: "9Yw1jCkcC-4", // Karuppu Perazhaga
+        events: { onStateChange: onPlayerStateChange }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        // Pause other YouTube videos
+        players.forEach(p => {
+          if (p !== event.target) {
+            p.pauseVideo();
+          }
+        });
+
+        // Pause local videos and audios
+        document.querySelectorAll("audio, video").forEach(media => {
+          media.pause();
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Audio mutual pause logic
+      const audios = document.querySelectorAll("audio");
+      audios.forEach(audio => {
+        audio.addEventListener("play", () => {
+          audios.forEach(other => {
+            if (other !== audio) {
+              other.pause();
+              other.currentTime = 0;
+            }
+          });
+          // pause all videos and YouTube
+          document.querySelectorAll("video").forEach(v => {
+            v.pause();
+          });
+          players.forEach(p => p.pauseVideo());
+        });
+      });
+
+      // Local videos mutual pause logic
+      const videos = document.querySelectorAll("video");
+      videos.forEach(video => {
+        video.addEventListener("play", () => {
+          videos.forEach(other => {
+            if (other !== video) {
+              other.pause();
+              other.currentTime = 0;
+            }
+          });
+          // pause audios and YouTube
+          document.querySelectorAll("audio").forEach(a => a.pause());
+          players.forEach(p => p.pauseVideo());
+        });
+      });
+    });
 
     function handleClickEvent() {
-    const videoDiv = document.querySelector('.video');
-    const audioDiv = document.querySelector('.audio');
+      const videoDiv = document.querySelector(".video");
+      const audioDiv = document.querySelector(".audio");
 
-    if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
-        // Show video section, hide audio section
-        videoDiv.style.display = 'block';
-        audioDiv.style.display = 'none';
-        document.getElementById('text').innerHTML = "UnClick to listen Audio Songs";
+      if (videoDiv.style.display === "none" || videoDiv.style.display === "") {
+        videoDiv.style.display = "block";
+        audioDiv.style.display = "none";
+        document.getElementById("text").innerHTML =
+          "UnClick to listen Audio Songs";
 
         // Pause all audio
-        const audios = document.querySelectorAll('audio');
-        audios.forEach(audio => {
-            audio.pause();
-            audio.currentTime = 0; // reset to start if desired
+        document.querySelectorAll("audio").forEach(audio => {
+          audio.pause();
+          audio.currentTime = 0;
+        });
+      } else {
+        videoDiv.style.display = "none";
+        audioDiv.style.display = "block";
+        document.getElementById("text").innerHTML =
+          "Click to view Video Songs";
+
+        // Pause all videos
+        document.querySelectorAll("video").forEach(video => {
+          video.pause();
+          video.currentTime = 0;
         });
 
-    } else {
-        videoDiv.style.display = 'none';
-        audioDiv.style.display = 'block';
-        document.getElementById('text').innerHTML = "Click to view Video Songs";
-
-        // Optionally, stop videos too:
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.pause();
-            video.currentTime = 0;
+        // Pause all YouTube players
+        players.forEach(player => {
+          player.pauseVideo();
         });
+      }
     }
-}
-
-</script>
+  </script>
 </body>
 </html>
