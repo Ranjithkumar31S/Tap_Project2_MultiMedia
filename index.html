@@ -75,6 +75,7 @@
     //     const videoDiv = document.querySelector('.video');
     //     const audioDiv = document.querySelector('.audio');
         
+
     //     if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
     //         // If videoDiv is hidden or not set, show it and hide audioDiv
     //         videoDiv.style.display = 'block';
@@ -85,6 +86,18 @@
     //         audioDiv.style.display = 'block';
     //         document.getElementById('text').innerHTML = "Click to view Video Songs";
     //     }
+
+        if (videoDiv.style.display === 'none' || videoDiv.style.display === '') {
+            // If videoDiv is hidden or not set, show it and hide audioDiv
+            videoDiv.style.display = 'block';
+            audioDiv.style.display = 'none';
+            document.getElementById('text').innerHTML = "UnClick to listen Audio Songs";
+        } else {
+            videoDiv.style.display = 'none';
+            audioDiv.style.display = 'block';
+            document.getElementById('text').innerHTML = "Click to view Video Songs";
+        }
+
 
         
     // }
